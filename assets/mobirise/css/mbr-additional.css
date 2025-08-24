@@ -2885,3 +2885,14 @@ a {
   background-color: #000000;
   overflow: hidden;
 }
+/* Wymuszenie desktopowej szerokości */
+body {
+  min-width: 1024px !important;
+}
+
+/* (opcjonalnie) wyłączenie mobilnych stylów */
+@media (max-width: 767px) {
+  body {
+    min-width: 1024px !important;
+  }
+}
