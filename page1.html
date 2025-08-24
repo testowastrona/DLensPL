@@ -482,6 +482,42 @@
 <script src="assets/theme/js/script.js"></script>  
 <script src="assets/formoid/formoid.min.js"></script>
   
-  
+  <!-- Notka dla użytkowników mobilnych -->
+<div id="mobile-note" style="
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  max-width: 90%;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+">
+  📱 Aby odtworzyć obraz w pełni:<br>
+  • Android: przytrzymaj i wybierz „Wyświetl podgląd obrazu”<br>
+  • iOS: przytrzymaj, a pojawi się opcja podglądu
+  <br><br>
+  <button onclick="document.getElementById('mobile-note').style.display='none'"
+    style="background:#9fe870; border:none; padding:5px 10px; border-radius:6px; margin-top:8px; cursor:pointer;">
+    OK
+  </button>
+</div>
+
+<script>
+  // Wyświetl notkę tylko na telefonach
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    document.getElementById('mobile-note').style.display = 'block';
+    // Automatyczne schowanie po 12 sekundach
+    setTimeout(() => {
+      document.getElementById('mobile-note').style.display = 'none';
+    }, 12000);
+  }
+</script>
+
 </body>
 </html>
