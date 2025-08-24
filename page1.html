@@ -512,7 +512,7 @@
   // Wyświetl notkę tylko na telefonach
   if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
     document.getElementById('mobile-note').style.display = 'block';
-    // Automatyczne schowanie po 12 sekundach
+    // Automatyczne schowanie po 30 sekundach
     setTimeout(() => {
       document.getElementById('mobile-note').style.display = 'none';
     }, 12000);
