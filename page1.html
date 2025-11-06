@@ -566,7 +566,7 @@
 
     
 
-    <div class="container">
+   <div class="container">
         <div class="media-container-row align-center mbr-white">
             <div class="col-12">
                 <p class="mbr-text mb-0 mbr-fonts-style display-7"><strong>
@@ -575,8 +575,49 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/3645653" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com">Mobirise.com </a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/ytplayer/index.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/theme/js/script.js"></script>  
+<script src="assets/formoid/formoid.min.js"></script>
   
+  <!-- Notka dla użytkowników mobilnych -->
+<div id="mobile-note" style="
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 30px 35px;
+  border-radius: 20px;
+  font-size: 22px;
+  max-width: 98%;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+">
+  📱 Aby odtworzyć obraz w pełni:<br>
+  • Android: przytrzymaj i wybierz „Wyświetl podgląd obrazu”<br>
+  • iOS: przytrzymaj, a pojawi się opcja podglądu
+  <br><br>
+  <button onclick="document.getElementById('mobile-note').style.display='none'"
+    style="background:#9fe870; border:none; padding:12px 20px; border-radius:10px; margin-top:16px; cursor:pointer;">
+    OK
+  </button>
+</div>
+
+<script>
+  // Wyświetl notkę tylko na telefonach
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    document.getElementById('mobile-note').style.display = 'block';
+    // Automatyczne schowanie po 30 sekundach
+    setTimeout(() => {
+      document.getElementById('mobile-note').style.display = 'none';
+    }, 30000);
+  }
+</script>
   
 </body>
 </html>
